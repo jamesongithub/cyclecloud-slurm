@@ -38,14 +38,6 @@ user mungeuser do
   action :create
 end
 
-
-log 'message' do
-  message "slum_install: #{node[:slurm][:install]}"
-  level :info
-end
-
-node.debug_value('slurm', 'install')
-
 include_recipe 'slurm::_install' if node[:slurm][:install]
 
 #Fix munge permissions and create key

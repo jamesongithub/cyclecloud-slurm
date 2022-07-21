@@ -23,7 +23,7 @@ function build_slurm() {
 
     case ${DISTRO_FAMILY} in
         suse)
-            zypper install --no-confirm bzip2 rpmbuild munge-devel pam-devel mysql-devel
+            zypper install --no-confirm bzip2 rpmbuild munge-devel pam-devel mysql-devel autoconf
             ;;
         centos)
             CENTOS_VERSION=8.5
