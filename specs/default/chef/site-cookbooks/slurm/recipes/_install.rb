@@ -6,6 +6,7 @@
 # Licensed under the MIT License.
 
 slurmver = node[:slurm][:version]
+slurmsemver = node[:slurm][:version].split('-')[0]
 slurmarch = node[:slurm][:arch]
 slurmuser = node[:slurm][:user][:name]
 mungeuser = node[:munge][:user][:name]
@@ -104,5 +105,6 @@ when 'suse'
   end
   package packages do
     action :install
+    version slurmsemver
   end
 end
