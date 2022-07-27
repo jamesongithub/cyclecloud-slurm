@@ -124,4 +124,4 @@ function install_pmix() {
     cd ../../install/v3/
 }
 
-build_slurm suse 20.11.9
+build_slurm ${1} 20.11.9
